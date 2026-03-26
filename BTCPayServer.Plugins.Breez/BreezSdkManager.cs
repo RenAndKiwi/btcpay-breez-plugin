@@ -42,12 +42,8 @@ public sealed class BreezSdkManager : IDisposable
 
         try
         {
-            var network = config.Network?.ToLowerInvariant() switch
-            {
-                "testnet" => LiquidNetwork.Testnet,
-                "regtest" => LiquidNetwork.Regtest,
-                _ => LiquidNetwork.Mainnet,
-            };
+            // Note: Breez SDK Liquid currently only supports Mainnet
+            var network = LiquidNetwork.Mainnet;
 
             var workingDir = config.WorkingDir ?? Path.Combine(Path.GetTempPath(), "breez-btcpay", key[..16]);
             Directory.CreateDirectory(workingDir);
