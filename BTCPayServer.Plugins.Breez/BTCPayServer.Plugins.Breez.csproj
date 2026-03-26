@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>0.1.0</Version>
+    <Authors>Bitcoin Butler LLC</Authors>
+    <Description>BTCPay Server plugin that adds Breez SDK (Liquid) as a Lightning backend. Accept Lightning payments without running a node.</Description>
+    <PackageTags>btcpay;lightning;breez;liquid;nodeless</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/kiwihodl/btcpay-breez-plugin</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BTCPayServer.Lightning.Common" Version="1.*" />
+    <PackageReference Include="Breez.Sdk.Liquid" Version="0.12.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.*" />
+  </ItemGroup>
+</Project>
